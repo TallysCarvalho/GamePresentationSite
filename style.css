@@ -1,69 +1,419 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap");
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,700&display=swap");
+
+:root {
+    --base-space: 8px;
+    --color-black: #111921;
+    --color-gray: #999ca0;
+    --color-white: #fff;
+    --bg-light: #fff;
+    --bg-dark: #283a4e;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+/*Navbar Content*/
+
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 100px;
-  position: fixed;
-  z-index: 100;
-  background: transparent;
-  padding: 0rem calc((100vw - 1400px) / 2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 100;
+    background: transparent;
+    padding: 0rem calc((100vw - 1400px) / 2);
 }
 .logo {
     margin-left: 2rem;
-  }
+}
 
-  .logo-img{
-      height: 100px;
-  }
-  
-  .nav-links {
+.logo-img {
+    height: 100px;
+}
+
+.nav-links {
     margin-right: 2rem;
-  }
-  
-  .nav-links a {
+}
+
+.nav-links a {
     text-decoration: none;
     color: #fff;
     padding: 0rem 1rem;
-  }
-
-  .Header{
+}
+/*Header Presentation Content*/
+.Header {
     width: 100vh;
     height: 100vh;
-  }
-  
-  #VideoBG{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
+}
 
-  .game-desc-container{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-  }
+#VideoBG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-  .game-desc-container h1{
+/*Game description Content*/
+
+.game-desc-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-desc-container h1 {
+    margin-top: 2rem;
     font-size: 2.5rem;
     border-bottom: 5px solid black;
     margin-bottom: 2rem;
 }
 
-  .game-desc-subcontent{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-  }
+.game-desc-subcontent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.game-desc-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.game-desc-right p {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.66;
+    margin: 1rem;
+}
+
+.game-desc-right img {
+    border: 0.5rem solid rgb(186, 186, 186);
+}
+
+/**Game Catch Desc**/
+.game-catch {
+    width: 100vw;
+    height: 100vh;
+    background: url("/assets/bg_dark_texture.jpg");
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-catch-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    text-align: start;
+    padding: 0 13rem;
+}
+
+.game-catch-desc h1 {
+    font-size: 2.5rem;
+    border-bottom: 5px solid white;
+}
+
+.game-catch-desc p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.game-catch-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0 4rem;
+}
+
+.game-catch-images img {
+    border: 0.5rem solid rgb(186, 186, 186);
+}
+
+/**Content 3**/
+
+.game-region {
+    color: rgb(48, 47, 47);
+    display: flex;
+    flex-direction: column;
+}
+.game-region-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    text-align: start;
+    padding: 0 10rem;
+}
+
+.game-region-desc h1 {
+    font-size: 2rem;
+}
+
+.text-line {
+    width: 900px;
+    height: 10px;
+    margin-bottom: 1rem;
+}
+
+.game-region-desc p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.game-region-images {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0 4rem;
+}
+
+.game-region-images img {
+    border: 0.5rem solid rgb(186, 186, 186);
+}
+
+.game-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-item p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 1rem;
+    padding: 0 24rem;
+}
+/*GAME POKEMON CONTENT*/
+
+.game-pokemons {
+    background: url("/assets/bg_char.jpg");
+    background-size: cover;
+    color: rgb(48, 47, 47);
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+}
+
+.game-pokemons-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.game-pokemons-desc h1 {
+    font-size: 2rem;
+}
+
+.game-pokemons-desc p {
+    font-size: 1rem;
+    padding: 0 20rem;
+    color: black;
+    font-weight: bold;
+    padding-top: 1rem;
+    text-align: start;
+}
+
+.game-pokemons-choice {
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4rem;
+}
+
+.pokemon-choice-content {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.pokemon-choice-content p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #000;
+}
+
+.pokemon-choice-content .bg-name {
+    width: 100%;
+    height: 80px;
+    background: url("/assets/stats.png");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemon-choice-content .bg-name h1 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.dexInfo {
+    display: flex;
+}
+
+.dexInfo h3 {
+    margin: 0.4rem;
+    padding: 0.3rem;
+    color: #fff;
+    background-color: rgb(48, 47, 47);
+    border-radius: 0.4rem;
+}
+
+.dexInfo p {
+    margin: 1rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-align: start;
+    color: #000;
+}
+
+.suicune {
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    background: url("/assets/bg_arceus.jpg");
+    background-size: cover;
+    padding: 1rem;
+}
+
+.suicune-status {
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 10px black;
+    text-align: center;
+    margin-left: 5rem;
+    color: white;
+}
+
+.suicune-status-content p {
+    text-align: start;
+    padding: 0 3rem;
+}
+
+.status {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.status-categ p {
+    text-align: center;
+    color: black;
+    margin-bottom: 3px;
+    margin-right: 5px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 5px 20px;
+}
+
+.status-desc p {
+    text-align: start;
+    color: white;
+    margin-bottom: 3px;
+    margin-right: 5px;
+    border-radius: 4px;
+    padding: 5px 0px;
+}
+
+.suicune img {
+    width: 80%;
+    height: 80%;
+}
+
+.learn-more {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.learn-more p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0 10rem;
+    margin-bottom: 2rem;
+}
+
+.more-games {
+    display: flex;
+    
+}
+
+.more-games div{
+margin: 1rem;
+border: 10px solid rgb(91, 87, 111);
+}
+
+.learn-more button{
+    padding: 5px 30px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(199, 199, 199));
+    box-shadow: 5px 5px 10px rgb(226, 84, 84);
+}
+
+footer{
+    margin-top: 20px;
+    width: 100%;
+    height: 70vh;
+    background: url('/assets//bgfooter.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+footer a {
+    text-decoration: none;
+    color: #000;
+}
+
+footer .icons i{
+    font-size: 100px;
+    padding: 1rem;
+}
+
+footer .services a{
+    font-size: 2rem;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+}

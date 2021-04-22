@@ -75,38 +75,56 @@ nav {
 .game-desc-container h1 {
     margin-top: 2rem;
     font-size: 2.5rem;
-    border-bottom: 5px solid black;
+    border-bottom: 0.3rem solid black;
     margin-bottom: 2rem;
 }
 
 .game-desc-subcontent {
+    
     display: grid;
     grid-template-columns: 1fr 1fr;
+
 }
 
+.game-desc-left {
+    min-width: 100%;
+    min-height: 100%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-desc-left img{
+    width: 100%;
+    height: 90vh;
+    
+}
 .game-desc-right {
+
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 10px;
+    padding: 0.8rem;
 }
 
 .game-desc-right p {
     font-size: 1rem;
     font-weight: bold;
-    line-height: 1.66;
     margin: 1rem;
 }
 
 .game-desc-right img {
+    width: 100%;
+    height: 100%;
     border: 0.5rem solid rgb(186, 186, 186);
 }
 
 /**Game Catch Desc**/
 .game-catch {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: url("/assets/bg_dark_texture.jpg");
     background-size: cover;
     color: white;
@@ -188,6 +206,7 @@ nav {
 }
 
 .game-region-images img {
+    
     border: 0.5rem solid rgb(186, 186, 186);
 }
 
@@ -223,6 +242,8 @@ nav {
     justify-content: center;
 }
 
+
+
 .game-pokemons-desc h1 {
     font-size: 2rem;
 }
@@ -250,7 +271,10 @@ nav {
     justify-content: center;
     padding: 1rem;
 }
-
+.pokemon-choice-content img {
+    width: 80%;
+    height: 80%;
+}
 .pokemon-choice-content p {
     font-size: 1.1rem;
     font-weight: 500;
@@ -386,6 +410,7 @@ border: 10px solid rgb(91, 87, 111);
     font-weight: bold;
     background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(199, 199, 199));
     box-shadow: 5px 5px 10px rgb(226, 84, 84);
+    cursor: pointer;
 }
 
 footer{
@@ -416,4 +441,182 @@ footer .services a{
     color: white;
     padding: 1rem;
     text-decoration: none;
+}
+
+
+/*Media queries*/
+
+@media screen and (max-width: 780px){
+    .game-desc-subcontent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .game-catch-desc {
+        padding: 0;
+    }
+
+    .game-catch-images {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+    }
+
+    .game-catch-images img {
+       margin-bottom: 1rem;
+    }
+
+    .game-region-desc {
+        padding: 0;
+    }
+
+    .game-region-images {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+    }
+
+    .game-region-images img{
+        width: 100%;
+    height: 100%;
+        margin-bottom: 1rem;
+    }
+
+    
+    .game-item p {
+        text-align: center;
+        font-size: 1.1rem;
+        margin: 1rem;
+        padding: 0;
+    }
+
+    /****/
+
+    .game-pokemons-desc p {
+        padding: 0 2rem;
+    }
+    
+    .game-pokemons-choice {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    /*Suicune*/
+
+    .suicune {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        background: url("/assets/bg_arceusm.jpg");
+        background-size: cover;
+        padding: 1rem;
+        
+    }
+    
+    .suicune-status {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 1rem;
+        margin-left: 0;
+
+    }
+
+    
+    .suicune img {
+        width: 80%;
+        height: 80%;
+    }
+
+    .suicune-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /*Learn More*/
+    .learn-more{
+        width: 100%;
+        height: 100%;
+        background-color: #dddddd;
+        padding: 0;
+        margin: 0;
+    }
+    .learn-more p {
+        margin-top: 2rem;
+        font-size: 1rem;
+        padding: 0 1rem ;
+        margin-bottom: 2rem;
+    }
+    
+    .more-games {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    .more-games div{   
+    margin: 0;
+    border: 10px solid rgb(91, 87, 111);
+    }
+    
+    .learn-more button{
+        padding: 10px 30px;
+        outline: none;
+        border: none;
+        font-size: 1rem;
+        font-weight: bold;
+        background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(199, 199, 199));
+        box-shadow: 5px 5px 10px rgb(226, 84, 84);
+        cursor: pointer;
+    }
+
+    footer{
+        padding: 0;
+        margin: 0;
+    }
+
+    .Header {
+        width: 100%;
+        height: 100%;
+    }
+
+    #VideoBG {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    nav{
+        display: none;
+    }
+
+    footer{
+        margin-top: 0;
+        
+    }
+    
+    
+    footer .icons i{
+        font-size: 50px;
+        padding: 1rem;
+    }
+    
+    footer .services a{
+        font-size: 1rem;
+        color: white;
+        padding: 0;
+        text-decoration: none;
+    }
+    
+    
+    
+    
 }
